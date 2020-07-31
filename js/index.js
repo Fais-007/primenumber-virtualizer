@@ -39,11 +39,13 @@ function generateNumbers() {
 }
 
 function primeNumbers() {
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('total').innerHTML = '';
     // var size = 2000;
     const radio = document.getElementsByName('options');
     for (var i = 0; i < radio.length; i++) {
         if (radio[i].checked) {
-            size = radio[i].value * 1000;
+            size = radio[i].value * 1;
         }
     }
     document.getElementById('start').disabled = true;
