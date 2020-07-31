@@ -8,7 +8,6 @@ function generateNumbers() {
     for (var i = 1; i <= n; ++i) {
         var random = i;
         var newdiv = document.createElement('div');
-        var indexdiv = document.createElement('div');
 
         array[i] = random;
 
@@ -23,18 +22,8 @@ function generateNumbers() {
         newdiv.style.margin = '1px';
         newdiv.innerHTML = array[i];
         newdiv.setAttribute('id', `value-${i}`);
-        indexdiv.style.width = '50px';
-        indexdiv.style.height = '50px';
-        indexdiv.style.textAlign = 'center';
-        indexdiv.style.color = 'black';
-        indexdiv.style.verticalAlign = 'middle';
-        indexdiv.style.lineHeight = '50px';
-        indexdiv.style.float = 'left';
-        indexdiv.style.margin = '1px';
-        indexdiv.innerHTML = i;
         indexdiv.setAttribute('id', `index-${i}`);
         document.getElementById('visualizer').appendChild(newdiv);
-        // document.getElementById('index').appendChild(indexdiv);
     }
 }
 
