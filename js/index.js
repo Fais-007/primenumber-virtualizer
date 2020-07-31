@@ -45,7 +45,7 @@ function primeNumbers() {
     const radio = document.getElementsByName('options');
     for (var i = 0; i < radio.length; i++) {
         if (radio[i].checked) {
-            size = radio[i].value * 1;
+            size = radio[i].value * 1000;
         }
     }
     document.getElementById('start').disabled = true;
