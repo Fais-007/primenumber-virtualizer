@@ -93,6 +93,9 @@ function primeNumbers() {
         }
     }, size / 3);
 
+    var result = 'Prime Numbers: ';
+    var count = 0;
+
     for (var i = 1; i <= n; i++) {
         (function (i) {
             timer = window.setTimeout(function () {
@@ -153,6 +156,8 @@ function primeNumbers() {
                                 'green';
                             document.getElementById('li-8').style.color =
                                 'green';
+                            result = result + ' ' + i;
+                            count++;
                         }, (2 * size) / 3);
                     }
                 }
@@ -162,6 +167,8 @@ function primeNumbers() {
             document.getElementById('li-2').style.color = 'black';
             document.getElementById('start').disabled = false;
             clearInterval(t1);
+            document.getElementById('result').innerHTML = result;
+            document.getElementById('total').innerHTML = 'Total: ' + count;
         }, size * n);
     }
 }
